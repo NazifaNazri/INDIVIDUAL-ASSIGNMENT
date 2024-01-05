@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+        }
+
+        header {
+          padding: 1em;
+          text-align: center;
+          background: #160a9b;
+          color: #9f8308;
+        }
+
+        #logo {
+          max-width: 300px;
+          height: 300;
+          display: inline-block;
+          vertical-align: left;
+          margin-right: 0px;
+        }
+
+        .header h1 {
+          font-size: 40px;
+        }
+
+        section {
+          max-width: 800px;
+          margin: 2em auto;
+          padding: 1em;
+          background-color: #4764e1;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          color:white;
+          text-align: center;
+        }
+
+        /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+        .navbar {
+          overflow: hidden;
+          background-color: #9f8308;
+          position: sticky;
+          position: -webkit-sticky;
+          top: 0;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+          font-size: 20px;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+          background-color: #9f8308;
+          color: white;
+        }
+
+        /* Active/current link */
+        .navbar a.active {
+          background-color: #9f8308;
+          color: white;
+        }
+
+        /* Column container */
+        .row {  
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE10 */
+          flex-wrap: wrap;
+        }
+
+        hr.rounded {
+        border-top: 8px solid #bbb;
+        border-radius: 5px;
+        border-color: #4764e1;
+        }
+
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #19599d;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }    
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+          -ms-flex: 30%; /* IE10 */
+          flex: 30%;
+          background-color: white;
+          padding: 20px;
+        }
+
+        /* Main column */
+        .main {   
+          -ms-flex: 70%; /* IE10 */
+          flex: 70%;
+          background-color: #9f8308;
+          padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+          background-color: #aaa;
+          width: 100%;
+          padding: 20px;
+        }
+
+        .footer {
+          padding: 1em;
+          text-align: center;
+          background: #160a9b;
+          color: #9f8308;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+          .row {   
+            flex-direction: column;
+          }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+          .navbar a {
+            float: none;
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="header">
+    <img id="logo"src="images/logo.png" alt="image1">
+    <h1>NAZIFA NAZRI</h1>
+</div>
+
+<div class="navbar">
+  <a href="home.html" >HOME</a>
+  <a href="index.html">INDEX</a>
+  <a href="about.html">ABOUT</a>
+  <a href="education_level.html">EDUCATION LEVEL</a>
+  <a href="experiences.html">EXPERIENCES</a>
+  <a href="skills.html" class="right">SKILLS</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>TECHNICAL SKILLS</h2>
+    <p>Microsoft Office</p>
+    <p>W3 School</p>
+    <p>SQL Accounting</p>
+    <p>Canva</p>
+    <p>Inshot</p>
+    <p>Capcut</p>
+    <p>Adobe Acrobat</p>
+    <p>Kinemaster</p>
+    <p>PicsArt</p>
+
+    <hr class="rounded">
+
+    <h2>LANGUAGE SKILLS</h2>
+    <p>Bahasa Melayu</p>
+    <p>English</p>
+    <p>Mandarin</p>
+
+  </div>
+    
+  </div>
+
+<footer>
+  <h3><p>&copy; Copyright 2024 All rights reserved.</p></h3>
+  <button id="scrollToTopBtn" onclick="scrollToTop()">Go to Top</button>
+
+  <script>
+    // Get the button
+    var mybutton = document.getElementById("scrollToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
+  </script>
+</button>
+</footer>
+
+</body>
+</html>

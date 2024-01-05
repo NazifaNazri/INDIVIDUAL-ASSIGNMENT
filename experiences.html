@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+
+        header {
+          padding: 1em;
+          text-align: center;
+          background: #160a9b;
+          color: #9f8308;
+        }
+
+        #logo {
+          max-width: 300px;
+          height: 300;
+          display: inline-block;
+          vertical-align: left;
+          margin-right: 0px; 
+        }
+
+        .header h1 {
+          font-size: 40px;
+        }
+
+        section {
+          max-width: 800px;
+          margin: 2em auto;
+          padding: 1em;
+          background-color: #4764e1;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          color:white;
+          text-align: center;
+
+        }
+        /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+        .navbar {
+          overflow: hidden;
+          background-color: #9f8308;
+          position: sticky;
+          position: -webkit-sticky;
+          top: 0;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 20px;
+          text-decoration: none;
+          font-size: 20px;
+        }
+
+        .navbar a:hover {
+          background-color: #9f8308;
+          color: white;
+        }
+
+        /* Active/current link */
+        .navbar a.active {
+          background-color: #9f8308;
+          color: white;
+        }
+
+        /* Column container */
+        .row {  
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE10 */
+          flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+          -ms-flex: 30%; /* IE10 */
+          flex: 30%;
+          background-color: white;
+          padding: 20px;
+        }
+
+        /* Main column */
+        .main {   
+          -ms-flex: 70%; /* IE10 */
+          flex: 70%;
+          background-color: #9f8308;
+          padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+          background-color: #aaa;
+          width: 100%;
+          padding: 20px;
+        }
+
+        footer {
+          padding: 1em;
+          text-align: center;
+          background: #160a9b;
+          color: #9f8308;
+        }
+
+        hr.rounded {
+            border-top: 8px solid #bbb;
+            border-radius: 5px;
+            border-color: #4764e1;
+        }
+
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #19599d;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        img {
+            width: 50%;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+          .row {   
+            flex-direction: column;
+          }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+          .navbar a {
+            float: none;
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+      <img id="logo"src="images/logo.png" alt="image1">
+      <div class="header">
+      <h1>NAZIFA NAZRI</h1>
+</div>
+
+<div class="navbar">
+  <a href="home.html">HOME</a>
+  <a href="index.html">INDEX</a>
+  <a href="about.html">ABOUT</a>
+  <a href="education_level.html">EDUCATION LEVEL</a>
+  <a href="experiences.html"class="active">EXPERIENCES</a>
+  <a href="skills.html" class="right">SKILLS</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>EXPERIENCES</h2> 
+     <h3>WORKING EXPERIENCES</h3>
+     <h4><b>Part Time; Assistant, Admin Cum Finance</b></h4>
+     <p>Granulab (M) Sdn. Bhd.</p>
+     <h5>November 2022 - March 2023</h5>
+     <p>Perform other duties assigned by immediate superior or management.</p>
+     <p>Create and maintain filing systems, both electronic and physical.</p>
+     <p>Collate and distribute email.</p>
+     <p>Schedule and coordinate staff and other meetings.</p>
+
+     <h4><b>Internship; Business Administration</b></h4>
+     <p>Granulab (M) Sdn. Bhd.</p>
+     <h5>July 2022 - October 2022</h5> 
+     <p>Implement administrative task such as develop and maintian filing systems.</p>
+     <p>Assist staff for submitting tender through E-Perolehan software.</p>
+     <p>Doing request form, purchase order, sales order, delivery order, invoice and other correspondence.</p>    
+     <p>Follow up with specific hospitals for chase debtors.</p>
+     <p>Update on staff's leave by using Payroll Panda software.</p>
+     <p>Prepare memo regarding requested budget for approval from headquaters.</p>
+     <p>Attend HALAL Awareness training to get insights on concepts of HALAL industry.</p>
+     <p>Assist in recruitment and placement process.</p>
+
+     <hr class="rounded">
+
+     <h3>COCCURICULLAR ACTIVITIES</h3>
+     <p>Welfare Bureau of Association of Information System Management (AiMS) 2023/2024</p>
+     <p>Head of Academic Bureau of Student Representative Council (MPP) 2021/2022</p>
+     <p>Participant of Ask a Journalist Workshop 2022</p>
+     <p>Candidate of Sport Bureau Subcomittee 2020</p>
+     <p>School Prefect 2019 (SMK Kota Kemuning)</p>
+     <p>Participants in Hands On Chemistry Competition 2018</p>
+     <p>Librarian School 2016 - 2017</p>
+     <p>Participant of Drum Workshop 24 seasons 2017</p>
+     <p>Communication Workshop, Sunway College 2016</p>
+     <p>Motivational Workshop (Leadership From Inside Out), Help University 2016</p>
+     <p>Documentary Camera Course 2016</p>
+     <p>School Prefect 2014 (SK Bukit Rimau)</p>
+
+     <hr class="rounded">
+   
+     <img src="images/mpp_logo.jpeg" style="width:200px;;height:200">
+     <div class="desc"><b>Logo of Majlis Perwakilan Pelajar, Kolej Profesional MARA Seri Iskandar</b></div>
+     <img src="images/mpp_1.jpeg" style="width:400px;height:200;">
+     <div class="desc"><b>Image of Majlis Perwakilan Pelajar, Kolej Profesional MARA Seri Iskandar 2021/2022</b></div>
+     <img src="images/aims_logo.jpeg" style="width:200px;height:400;">
+     <div class="desc"><b>Logo of AiMS, Association of Information System Management</b></div>
+     <img src="images/aims_1.png" style="width:300px;height:400;">
+     <div class="desc"><b>Image of Myself as AiMS, Exco Kebajikan</b></div>
+     <img src="images/aims_2.jpg" style="width:300px;height:400;">
+     <div class="desc"><b>Image of AiMS, Exco Kebajikan during Avolve, Morph Into A Catalyst's program</b></div>
+     <img src="images/aims_3.jpg" style="width:400px;height:200;">
+     <div class="desc"><b>Image of Association of Information System Management session 2023/2024 </b></div>
+  </div>
+</div>
+
+<footer>
+  <h3><p>&copy; Copyright 2024 All rights reserved.</p></h3>
+  <button id="scrollToTopBtn" onclick="scrollToTop()">Go to Top</button>
+
+  <script>
+    // Get the button
+    var mybutton = document.getElementById("scrollToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
+  </script>
+</button>
+</footer>
+
+</body>
+</html>
